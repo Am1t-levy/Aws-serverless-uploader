@@ -45,4 +45,4 @@ sam build
 sam deploy --guided
 
 
-![צילום מסך 2025-04-26 221156](https://github.com/user-attachments/assets/0667e9fc-0d55-42cf-81c0-f2b5d0af0508)
+![צילום מסך 2025-04-26 221156](https://github.com/user-attachments/assets/d39d3357-03e4-463b-9382-b65686c3c9fe)
