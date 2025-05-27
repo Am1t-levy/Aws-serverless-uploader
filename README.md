@@ -36,13 +36,23 @@ Users can upload files through a static frontend hosted on **S3**, with the requ
 Upload the contents of the `frontend/` folder (e.g., `index.html`, `app.js`, `style.css`) to an S3 bucket configured for static website hosting.  
 Make sure the bucket policy allows public read access if testing publicly.
 
-### 2. Backend Setup (Lambda)
+### 2. Backend Setup
 
-From the `backend/` directory, run:
+Upload the contents of the `backend/` folder to a new AWS Lambda function.  
+Make sure the function:
+- Is set to `Node.js 18.x` or similar runtime.
+- Has permissions to write to your S3 bucket.
+- Uses the provided `index.js` to handle file uploads.
 
-```bash
-sam build
-sam deploy --guided
+Connect the Lambda function to an API Gateway endpoint:
+- Set the method to `POST`.
+- Enable **binary media types** like `image/*` and `video/*` in API Gateway settings.
+- Deploy the API and copy the Invoke URL.
+
+🔁 Don't forget to update the frontend's `app.js` with your new API Gateway URL.
 
 
-![צילום מסך 2025-04-26 221156](https://github.com/user-attachments/assets/d39d3357-03e4-463b-9382-b65686c3c9fe)
+![צילום מסך 2025-04-26 221156](https://github.com/user-attachments/assets/4595d80c-aa61-47cc-9079-ede70af813d2)
+
+
+
