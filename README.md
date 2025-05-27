@@ -43,3 +43,6 @@ From the `backend/` directory, run:
 ```bash
 sam build
 sam deploy --guided
+
+
+![צילום מסך 2025-04-26 221156](https://github.com/user-attachments/assets/0667e9fc-0d55-42cf-81c0-f2b5d0af0508)
